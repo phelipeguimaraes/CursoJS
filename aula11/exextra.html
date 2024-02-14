@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Passaporte</title>
+</head>
+<body>
+    <h1>Passaporte Digital</h1>
+    Digite seu país: <input type="text" name="abroad" id="txtpais">
+    <input type="button" value="Verificar" onclick="buscar()">
+    <div id="res">
+
+    </div>
+    <script>
+        function buscar() {
+            var pais = window.document.getElementById('txtpais')
+            var res = window.document.getElementById('res')
+            var abroad = String(pais.value)
+            res.innerHTML = `<p>Você nasceu na ${abroad}</p>`
+            if (abroad == 'Brasil') {
+                res.innerHTML += 'Você é brasileiro!'
+            } else {
+                res.innerHTML += 'Você é estrangeiro!'
+            }
+        }
+    </script>
+</body>
+</html>
